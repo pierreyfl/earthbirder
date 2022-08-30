@@ -1,5 +1,5 @@
 = form.label :description, t('listings.form.description.detailed_description'), :class => "input"
 - markdown_popup_link = link_to t("settings.profile.format_markdown_link"), "#", id: "markdown-popup-link"
 - info_text = t("listings.form.description.youtube_info_markdown", link: markdown_popup_link).html_safe
-= render partial: "layouts/info_text", locals: { text:  info_text}
-= form.text_area(:description, :maxlength => "5000", :class => "listing_description_textarea")
+=# render partial: "layouts/info_text", locals: { text:  info_text}
+= form.text_area(:description, :maxlength => "5000", :class => "listing_description_textarea", :placeholder => "Patagonia offers a lot of options and varied habitat for birding. I can show you all of the southwest specialties of the sky islands (Elegant Trogon, Red-faced Warbler, Virginia Warbler, and others) and/or we can go for rarities such as White-eared Hummingbird, Eared Quetzal, Buff-collared Nightjar. If you have a target list, please send it to me and we will do our best to locate your birds! Depending on your preference, we may visit Madera Canyon, The Patton Center for Hummingbirds, or the Sonoita Creek Preserve.")

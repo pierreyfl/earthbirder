@@ -2386,7 +2386,7 @@ en:
       departure_time_radio_buttons:
         repeated: "Repeated (add times and days in the field 'detailed description')"
       description:
-        detailed_description: "Detailed description"
+        detailed_description: "Description of Services"
         youtube_info: "If your description contains YouTube links, the videos will be shown below the description."
         youtube_info_markdown: "You can %{link}. If your description contains YouTube links, the videos will be shown below the description."
       destination:

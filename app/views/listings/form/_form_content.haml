@@ -2,8 +2,10 @@
 
 = form_for @listing_presenter.listing_form_object, :html => {:multipart => true} do |form|
   = render :partial => "listings/form/title", :locals => { :form => form }
-  = render :partial => "listings/form/price", :locals => { :form => form, :run_js_immediately => run_js_immediately }
+  = render :partial => "listings/form/location_country", :locals => { :form => form }
+  =# render :partial => "listings/form/price", :locals => { :form => form, :run_js_immediately => run_js_immediately }
   = render :partial => "listings/form/shipping", :locals => { :form => form }
+  = render :partial => "listings/form/description_area", :locals => { :form => form }
   = render :partial => "listings/form/description", :locals => { :form => form }
   = render :partial => "listings/form/custom_fields", :locals => { :form => form }
   = render :partial => "listings/form/valid_until", :locals => { :form => form }
@@ -11,8 +13,175 @@
     = render :partial => "listings/form/origin", :locals => { :form => form }
     = render :partial => "listings/form/googlemap", :locals => { :form => form, :run_js_immediately => run_js_immediately}
   = render :partial => "listings/form/images", :locals => { :form => form, :run_js_immediately => run_js_immediately }
+  = render :partial => "listings/form/pricing", :locals => { :form => form }
   = render :partial => "listings/form/send_button", :locals => { :form => form }
   = hidden_field_tag 'listing_ordered_images'
 
 = render :partial => "listings/help_texts", :collection => ["help_valid_until"], :as => :field
 = render "layouts/markdown_help", run_js_immediately: run_js_immediately
+
+
+:javascript
+  $( document ).ready(function() {
+      $(function()
+      {
+        $('[id="inlineCheckbox1"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+             $('#section-trip-type').show();
+          };
+        });
+        $('[id="fdt-checkbox"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+             $('#section-fullday-trip').show();
+          } else {
+            $('#section-fullday-trip').hide();
+          };
+        });
+        $('[id="hdt-checkbox"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#section-halfday-trip').show();
+          } else {
+            $('#section-halfday-trip').hide();
+          };
+        });
+        $('[id="ht-checkbox"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#section-hourly-trip').show();
+          } else {
+            $('#section-hourly-trip').hide();
+          };
+        });
+        $('[id="single_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_1_').prop( "disabled", true );
+          } else {
+            $('#price_1_').prop( "disabled", false );
+          };
+        });
+        $('[id="two_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_two_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_two_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="three_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_three_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_three_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="four_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_four_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_four_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="five_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_five_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_five_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="six_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_six_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_six_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="seven_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_seven_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_seven_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="eight_person_occupancy"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_eight_people_').prop( "disabled", true );
+          } else {
+            $('#price_for_eight_people_').prop( "disabled", false );
+          };
+        });
+        $('[id="single_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_single_person_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_single_person_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="two_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_two_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_two_people_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="three_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_three_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_three_people_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="four_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_four_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_four_people_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="five_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_five_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_five_people_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="six_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_six_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_six_people_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="seven_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_seven_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_seven_people_hd_').prop( "disabled", false );
+          };
+        });
+        $('[id="eight_person_occupancy_hd"]').change(function()
+        {
+          if ($(this).is(':checked')) {
+            $('#price_for_eight_people_hd_').prop( "disabled", true );
+          } else {
+            $('#price_for_eight_people_hd_').prop( "disabled", false );
+          };
+        });
+      });
+  });

@@ -1,0 +1,164 @@
+= form.label :Pricing, 'Pricing Setup', :class => "input"
+
+%p Do you want to use EarthBirder Guide Business Tools? Earthbirder.com can enable you to take bookings, show and edit your availability on a calendar, take online payments, and chat with your customers instantly. Look professional and focus more on birding and your customer experience with Earthbirder Guide Business Tools
+
+.form-check.form-check-inline{:style => "display: inline-block"}
+  %input#inlineCheckbox1.form-check-input{:type => "checkbox", :value => "option1"}/
+  %label.form-check-label{:for => "inlineCheckbox1", :style => "display: inline"} Yes
+.form-check.form-check-inline{:style => "display: inline-block"}
+  %input#inlineCheckbox2.form-check-input{:type => "checkbox", :value => "option2"}/
+  %label.form-check-label{:for => "inlineCheckbox2", :style => "display: inline"} No
+
+
+#section-trip-type{:style => "display: none; margin-top: 10px;"}
+  %h3 Trip type you will offer (check all that apply)
+  .form-check.form-check-inline
+    %input#fdt-checkbox.form-check-input{:type => "checkbox", :value => "Full day trip"}>
+    %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Full day trip
+  .form-check.form-check-inline
+    %input#hdt-checkbox.form-check-input{:type => "checkbox", :value => "Half day trip"}>
+    %label.form-check-label{:for => "hdt-checkbox", :style => "display: inline"} Half day trip
+  .form-check.form-check-inline
+    %input#ht-checkbox.form-check-input{:type => "checkbox", :value => "Hourly trip"}>
+    %label.form-check-label{:for => "ht-checkbox", :style => "display: inline"} Hourly Trip
+  .form-check.form-check-inline
+    %input#custom-checkbox.form-check-input{:type => "checkbox", :value => "Custom"}>
+    %label.form-check-label{:for => "custom-checkbox", :style => "display: inline"} Custom
+
+#section-fullday-trip{:style => "display: none; margin-top: 10px;"}
+  %h3{:style => "text-decoration: underline;"} Full day trip
+  = form.label :price, 'Price for single person'
+  = text_field :price_1, nil, class: 'price-field'
+
+  = form.label :single_person_occupancy, 'Single-person occupancy'
+  = check_box_tag :single_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :two_people, 'Price for two people'
+  = text_field :price_for_two_people, nil, class: 'price-field'
+
+  = form.label :two_person_occupancy, 'Two-person occupancy'
+  = check_box_tag :two_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :three_people, 'Price for three people'
+  = text_field :price_for_three_people, nil, class: 'price-field'
+
+  = form.label :three_person_occupancy, 'Three-person occupancy'
+  = check_box_tag :three_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+  
+  = form.label :four_people, 'Price for four people'
+  = text_field :price_for_four_people, nil, class: 'price-field'
+
+  = form.label :four_person_occupancy, 'Four-person occupancy'
+  = check_box_tag :four_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :five_people, 'Price for five people'
+  = text_field :price_for_five_people, nil, class: 'price-field'
+
+  = form.label :five_person_occupancy, 'Five-person occupancy'
+  = check_box_tag :five_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :six_people, 'Price for Six people'
+  = text_field :price_for_six_people, nil, class: 'price-field'
+
+  = form.label :six_person_occupancy, 'Six-person occupancy'
+  = check_box_tag :six_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :seven_people, 'Price for seven people'
+  = text_field :price_for_seven_people, nil, class: 'price-field'
+
+  = form.label :seven_person_occupancy, 'Seven-person occupancy'
+  = check_box_tag :seven_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :two_people, 'Price for eight people'
+  = text_field :price_for_eight_people, nil, class: 'price-field'
+
+  = form.label :eight_person_occupancy, 'Eight-person occupancy'
+  = check_box_tag :eight_person_occupancy, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+
+#section-halfday-trip{:style => "display: none; margin-top: 10px;"}
+  %h3{:style => "text-decoration: underline;"} Half day trip
+  = form.label :price_for_single_person_hd, 'Price for single person'
+  = text_field :price_for_single_person_hd, nil, class: 'price-field'
+
+  = form.label :single_person_occupancy_hd, 'Single-person occupancy'
+  = check_box_tag :single_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :two_people_hd, 'Price for two people'
+  = text_field :price_for_two_people_hd, nil, class: 'price-field'
+
+  = form.label :two_person_occupancy_hd, 'Two-person occupancy'
+  = check_box_tag :two_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :three_people_hd, 'Price for three people'
+  = text_field :price_for_three_people_hd, nil, class: 'price-field'
+
+  = form.label :three_person_occupancy_hd, 'Three-person occupancy'
+  = check_box_tag :three_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+  
+  = form.label :four_people_hd, 'Price for four people'
+  = text_field :price_for_four_people_hd, nil, class: 'price-field'
+
+  = form.label :four_person_occupancy_hd, 'Four-person occupancy'
+  = check_box_tag :four_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :five_people_hd, 'Price for five people'
+  = text_field :price_for_five_people_hd, nil, class: 'price-field'
+
+  = form.label :five_person_occupancy_hd, 'Five-person occupancy'
+  = check_box_tag :five_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :six_people_hd, 'Price for Six people'
+  = text_field :price_for_six_people_hd, nil, class: 'price-field'
+
+  = form.label :six_person_occupancy_hd, 'Six-person occupancy'
+  = check_box_tag :six_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :seven_people_hd, 'Price for seven people'
+  = text_field :price_for_seven_people_hd, nil, class: 'price-field'
+
+  = form.label :seven_person_occupancy_hd, 'Seven-person occupancy'
+  = check_box_tag :seven_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+  = form.label :eight_people_hd, 'Price for eight people'
+  = text_field :price_for_eight_people_hd, nil, class: 'price-field'
+
+  = form.label :eight_person_occupancy_hd, 'Eight-person occupancy'
+  = check_box_tag :eight_person_occupancy_hd, false
+  %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
+
+#section-hourly-trip{:style => "display: none; margin-top: 10px;"}
+  %h3{:style => "text-decoration: underline;"} Hourly Trip
+
+  = form.label :rate_per_hour, 'Rate per hour'
+  = form.text_field :price, :class => "price-field", :maxlength => "10", :placeholder => "0", :value => (@listing.price ? @listing.price.to_s: 0)
+  - if @listing_presenter.unit_options.empty?
+    -# No-op
+  - elsif @listing_presenter.unit_options.length == 1
+    - unit_option = @listing_presenter.unit_options.first
+    .quantity-description
+      = t(".per")
+      = unit_option[:display]
+    = hidden_field_tag("listing[unit]", unit_option[:value])
+  - else
+    .quantity-description
+      = t(".per")
+    %select.js-listing-unit{name: "listing[unit]"}
+      - @listing_presenter.unit_options.each do |unit_option|
+        %option{value: unit_option[:value], selected: unit_option[:selected], data: { kind: unit_option[:kind] }}
+          = unit_option[:display]
