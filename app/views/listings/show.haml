@@ -44,18 +44,29 @@
 .row
   .col-8.listing-details-container
     / Modal
-    #exampleModalCenter.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalCenterTitle", :role => "dialog", :tabindex => "-1"}
+    #fullDayTripModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "fullDayTripModal", :role => "dialog", :tabindex => "-1"}
       .modal-dialog.modal-dialog-centered{:role => "document"}
         .modal-content
           .modal-header
-            %h5#exampleModalLongTitle.modal-title Modal title
+            %h5#exampleModalLongTitle.modal-title Full Day Trip Price List
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
             \...
           .modal-footer
             %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
-            %button.btn.btn-primary{:type => "button"} Save changes
+    / Modal
+    #halfDayTripModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "halfDayTripModal", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-centered{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalLongTitle.modal-title Half Day Trip Price List
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            \...
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
     .row
       .col-12
         - with_image_frame(@listing) do |reason, listing_images|
@@ -151,11 +162,11 @@
             Launch demo modal
       .row
         .col-12
-          %a#full-day-trip{:href => "#"}
+          %a#full-day-trip{"data-target" => "#fullDayTripModal", "data-toggle" => "modal", :href => "#"}
             Full Day Trip - Start from $40 per pax.
       .row
         .col-12
-          %a#half-day-trip{:href => "#"}
+          %a#half-day-trip{"data-target" => "#halfDayTripModal", "data-toggle" => "modal", :href => "#"}
             Half Day Trip - Start from $20 per pax.
       .row
         .col-12
