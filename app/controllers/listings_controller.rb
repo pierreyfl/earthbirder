@@ -93,6 +93,7 @@ class ListingsController < ApplicationController
 
     puts @listing
     puts "This is a test"
+    puts @listing.price_1
 
     record_event(
       flash.now,

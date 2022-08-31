@@ -131,17 +131,19 @@
     - if @listing.price
       .row
         .col-12
-          %span Full Day Trip - Start from $20 per pax.
+          %a#full-day-trip{:href => "#"}
+            Full Day Trip - Start from $40 per pax.
       .row
         .col-12
-          %span Full Day Trip - Start from $20 per pax.
+          %a#half-day-trip{:href => "#"}
+            Half Day Trip - Start from $20 per pax.
       .row
         .col-12
           .listing-price
-            %span.listing-price-amount
+            %span
               = MoneyViewUtils.to_humanized(@listing.price)
             - with_quantity_text(@current_community, @listing) do |text|
-              %span.listing-price-quantity
+              %span
                 = text
 
     .row-with-divider
