@@ -22,6 +22,8 @@
 - content_for :meta_image_height, dimensions[:height].to_s if !@listing.listing_images.empty?
 
 - content_for :title_header do
+  %link{rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css", integrity: "sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N", crossorigin: "anonymous"}
+  %script{src: "https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js", integrity: "sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+", crossorigin: "anonymous"}
   %h1
     %span#listing-title.listing-title= @listing.title
 
@@ -40,6 +42,19 @@
 
 .row
   .col-8.listing-details-container
+    / Modal
+    #exampleModalCenter.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalCenterTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-centered{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalLongTitle.modal-title Modal title
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            \...
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
     .row
       .col-12
         - with_image_frame(@listing) do |reason, listing_images|
@@ -129,6 +144,10 @@
 
   %aside.col-4
     - if @listing.price
+      .row
+        .col-12
+          %button.btn.btn-primary{"data-target" => "#exampleModalCenter", "data-toggle" => "modal", :type => "button"}
+            Launch demo modal
       .row
         .col-12
           %a#full-day-trip{:href => "#"}
