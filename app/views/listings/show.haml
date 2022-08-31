@@ -53,28 +53,28 @@
               %span{"aria-hidden" => "true"} ×
           .modal-body
             %p
-              1 Person - 
+              1 Person - $
               = @listing.price_1.to_s
             %p
-              2 Person -
+              2 Person - $
               = @listing.price_for_two_people.to_s
             %p
-              3 Person -
+              3 Person - $
               = @listing.price_for_three_people.to_s
             %p
-              4 Person -
+              4 Person - $
               = @listing.price_for_four_people.to_s
             %p
-              5 Person -
+              5 Person - $
               = @listing.price_for_five_people.to_s
             %p
-              6 Person -
+              6 Person - $
               = @listing.price_for_six_people.to_s
             %p
-              7 Person -
+              7 Person - $
               = @listing.price_for_seven_people.to_s
             %p
-              8 Person -
+              8 Person - $
               = @listing.price_for_eight_people.to_s
           .modal-footer
             %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
@@ -88,28 +88,28 @@
               %span{"aria-hidden" => "true"} ×
           .modal-body
             %p
-              1 Person - 
+              1 Person - $
               = @listing.price_for_single_person_hd.to_s
             %p
-              2 Person -
+              2 Person - $
               = @listing.price_for_two_people_hd.to_s
             %p
-              3 Person -
+              3 Person - $
               = @listing.price_for_three_people_hd.to_s
             %p
-              4 Person -
+              4 Person - $
               = @listing.price_for_four_people_hd.to_s
             %p
-              5 Person -
+              5 Person - $
               = @listing.price_for_five_people_hd.to_s
             %p
-              6 Person -
+              6 Person - $
               = @listing.price_for_six_people_hd.to_s
             %p
-              7 Person -
+              7 Person - $
               = @listing.price_for_seven_people_hd.to_s
             %p
-              8 Person -
+              8 Person - $
               = @listing.price_for_eight_people_hd.to_s
           .modal-footer
             %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
@@ -202,18 +202,20 @@
 
   %aside.col-4
     - if @listing.price
-      .row
-        .col-12
-          %a#full-day-trip{"data-target" => "#fullDayTripModal", "data-toggle" => "modal", :href => "#"}
-            Full Day Trip - Start from $
-            =@listing.price_1.to_s + ' '  
-            per pax.
-      .row
-        .col-12
-          %a#half-day-trip{"data-target" => "#halfDayTripModal", "data-toggle" => "modal", :href => "#"}
-            Half Day Trip - Start from $
-            =@listing.price_for_single_person_hd.to_s + ' '
-            per pax.
+      - if @listing.price_1 != nil
+        .row
+          .col-12
+            %a#full-day-trip{"data-target" => "#fullDayTripModal", "data-toggle" => "modal", :href => "#"}
+              Full Day Trip - Start from $
+              =@listing.price_1.to_s + ' '  
+              per pax.
+      - if @listing.price_for_single_person_hd != nil
+        .row
+          .col-12
+            %a#half-day-trip{"data-target" => "#halfDayTripModal", "data-toggle" => "modal", :href => "#"}
+              Half Day Trip - Start from $
+              =@listing.price_for_single_person_hd.to_s + ' '
+              per pax.
       .row
         .col-12
           .listing-price
