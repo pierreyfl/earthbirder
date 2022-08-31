@@ -55,6 +55,27 @@
             %p
               1 Person - 
               = @listing.price_1.to_s
+            %p
+              2 Person -
+              = @listing.price_for_two_people.to_s
+            %p
+              3 Person -
+              = @listing.price_for_three_people.to_s
+            %p
+              4 Person -
+              = @listing.price_for_four_people.to_s
+            %p
+              5 Person -
+              = @listing.price_for_five_people.to_s
+            %p
+              6 Person -
+              = @listing.price_for_six_people.to_s
+            %p
+              7 Person -
+              = @listing.price_for_seven_people.to_s
+            %p
+              8 Person -
+              = @listing.price_for_eight_people.to_s
           .modal-footer
             %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
     / Modal
@@ -66,7 +87,30 @@
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
-            \...
+            %p
+              1 Person - 
+              = @listing.price_for_single_person_hd.to_s
+            %p
+              2 Person -
+              = @listing.price_for_two_people_hd.to_s
+            %p
+              3 Person -
+              = @listing.price_for_three_people_hd.to_s
+            %p
+              4 Person -
+              = @listing.price_for_four_people_hd.to_s
+            %p
+              5 Person -
+              = @listing.price_for_five_people_hd.to_s
+            %p
+              6 Person -
+              = @listing.price_for_six_people_hd.to_s
+            %p
+              7 Person -
+              = @listing.price_for_seven_people_hd.to_s
+            %p
+              8 Person -
+              = @listing.price_for_eight_people_hd.to_s
           .modal-footer
             %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
     .row
@@ -174,10 +218,10 @@
         .col-12
           .listing-price
             %span
+              Hourly rate - 
+            %span
               = MoneyViewUtils.to_humanized(@listing.price)
             - with_quantity_text(@current_community, @listing) do |text|
-              %span
-                Hourly rate - 
                 = text
 
     .row-with-divider
