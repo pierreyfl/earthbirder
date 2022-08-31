@@ -52,7 +52,9 @@
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
-            \...
+            %p
+              1 Person - 
+              = @listing.price_1.to_s
           .modal-footer
             %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
     / Modal
@@ -175,6 +177,7 @@
               = MoneyViewUtils.to_humanized(@listing.price)
             - with_quantity_text(@current_community, @listing) do |text|
               %span
+                Hourly rate - 
                 = text
 
     .row-with-divider
