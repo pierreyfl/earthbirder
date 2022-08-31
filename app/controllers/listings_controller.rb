@@ -91,6 +91,9 @@ class ListingsController < ApplicationController
     @listing_presenter.form_path = new_transaction_path(listing_id: @listing.id)
     @seo_service.listing = @listing
 
+    puts @listing
+    puts "This is a test"
+
     record_event(
       flash.now,
       "ListingViewed",
