@@ -124,6 +124,9 @@ class ListingsController < ApplicationController
     if new_listing_author != @current_user
       logger.info "ADMIN ACTION: admin='#{@current_user.id}' create listing params=#{params.inspect}"
     end
+
+    puts params 
+    puts 'this is a test'
     if show_location? && params[:listing][:origin_loc_attributes][:address].blank?
       params[:listing].delete("origin_loc_attributes")
     end

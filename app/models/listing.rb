@@ -49,6 +49,22 @@
 #  per_hour_ready                  :boolean          default(FALSE)
 #  state                           :string(255)      default("approved")
 #  approval_count                  :integer          default(0)
+#  price_1                         :decimal(10, )
+#  price_for_two_people            :decimal(10, )
+#  price_for_three_people          :decimal(10, )
+#  price_for_four_people           :decimal(10, )
+#  price_for_five_people           :decimal(10, )
+#  price_for_six_people            :decimal(10, )
+#  price_for_seven_people          :decimal(10, )
+#  price_for_eight_people          :decimal(10, )
+#  price_for_single_person_hd      :decimal(10, )
+#  price_for_two_people_hd         :decimal(10, )
+#  price_for_three_people_hd       :decimal(10, )
+#  price_for_four_people_hd        :decimal(10, )
+#  price_for_five_people_hd        :decimal(10, )
+#  price_for_six_people_hd         :decimal(10, )
+#  price_for_seven_people_hd       :decimal(10, )
+#  price_for_eight_people_hd       :decimal(10, )
 #
 # Indexes
 #

@@ -28,56 +28,56 @@
 #section-fullday-trip{:style => "display: none; margin-top: 10px;"}
   %h3{:style => "text-decoration: underline;"} Full day trip
   = form.label :price, 'Price for single person'
-  = text_field :price_1, nil, class: 'price-field'
+  = form.text_field :price_1, class: 'price-field'
 
   = form.label :single_person_occupancy, 'Single-person occupancy'
   = check_box_tag :single_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :two_people, 'Price for two people'
-  = text_field :price_for_two_people, nil, class: 'price-field'
+  = form.text_field :price_for_two_people, class: 'price-field'
 
   = form.label :two_person_occupancy, 'Two-person occupancy'
   = check_box_tag :two_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :three_people, 'Price for three people'
-  = text_field :price_for_three_people, nil, class: 'price-field'
+  = form.text_field :price_for_three_people, class: 'price-field'
 
   = form.label :three_person_occupancy, 'Three-person occupancy'
   = check_box_tag :three_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
   
   = form.label :four_people, 'Price for four people'
-  = text_field :price_for_four_people, nil, class: 'price-field'
+  = form.text_field :price_for_four_people, class: 'price-field'
 
   = form.label :four_person_occupancy, 'Four-person occupancy'
   = check_box_tag :four_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :five_people, 'Price for five people'
-  = text_field :price_for_five_people, nil, class: 'price-field'
+  = form.text_field :price_for_five_people, class: 'price-field'
 
   = form.label :five_person_occupancy, 'Five-person occupancy'
   = check_box_tag :five_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :six_people, 'Price for Six people'
-  = text_field :price_for_six_people, nil, class: 'price-field'
+  = form.text_field :price_for_six_people, class: 'price-field'
 
   = form.label :six_person_occupancy, 'Six-person occupancy'
   = check_box_tag :six_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :seven_people, 'Price for seven people'
-  = text_field :price_for_seven_people, nil, class: 'price-field'
+  = form.text_field :price_for_seven_people, class: 'price-field'
 
   = form.label :seven_person_occupancy, 'Seven-person occupancy'
   = check_box_tag :seven_person_occupancy, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :two_people, 'Price for eight people'
-  = text_field :price_for_eight_people, nil, class: 'price-field'
+  = form.text_field :price_for_eight_people, class: 'price-field'
 
   = form.label :eight_person_occupancy, 'Eight-person occupancy'
   = check_box_tag :eight_person_occupancy, false
@@ -87,56 +87,56 @@
 #section-halfday-trip{:style => "display: none; margin-top: 10px;"}
   %h3{:style => "text-decoration: underline;"} Half day trip
   = form.label :price_for_single_person_hd, 'Price for single person'
-  = text_field :price_for_single_person_hd, nil, class: 'price-field'
+  = form.text_field :price_for_single_person_hd, class: 'price-field'
 
   = form.label :single_person_occupancy_hd, 'Single-person occupancy'
   = check_box_tag :single_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :two_people_hd, 'Price for two people'
-  = text_field :price_for_two_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_two_people_hd, class: 'price-field'
 
   = form.label :two_person_occupancy_hd, 'Two-person occupancy'
   = check_box_tag :two_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :three_people_hd, 'Price for three people'
-  = text_field :price_for_three_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_three_people_hd, class: 'price-field'
 
   = form.label :three_person_occupancy_hd, 'Three-person occupancy'
   = check_box_tag :three_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
   
   = form.label :four_people_hd, 'Price for four people'
-  = text_field :price_for_four_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_four_people_hd, class: 'price-field'
 
   = form.label :four_person_occupancy_hd, 'Four-person occupancy'
   = check_box_tag :four_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :five_people_hd, 'Price for five people'
-  = text_field :price_for_five_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_five_people_hd, class: 'price-field'
 
   = form.label :five_person_occupancy_hd, 'Five-person occupancy'
   = check_box_tag :five_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :six_people_hd, 'Price for Six people'
-  = text_field :price_for_six_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_six_people_hd, class: 'price-field'
 
   = form.label :six_person_occupancy_hd, 'Six-person occupancy'
   = check_box_tag :six_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :seven_people_hd, 'Price for seven people'
-  = text_field :price_for_seven_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_seven_people_hd, class: 'price-field'
 
   = form.label :seven_person_occupancy_hd, 'Seven-person occupancy'
   = check_box_tag :seven_person_occupancy_hd, false
   %label.form-check-label{:for => "fdt-checkbox", :style => "display: inline"} Not available
 
   = form.label :eight_people_hd, 'Price for eight people'
-  = text_field :price_for_eight_people_hd, nil, class: 'price-field'
+  = form.text_field :price_for_eight_people_hd, class: 'price-field'
 
   = form.label :eight_person_occupancy_hd, 'Eight-person occupancy'
   = check_box_tag :eight_person_occupancy_hd, false
